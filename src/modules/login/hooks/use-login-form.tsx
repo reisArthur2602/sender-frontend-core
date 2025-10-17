@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-const UseLoginForm = () => {
+export const UseLoginForm = () => {
   const form = useForm();
   const loading = form.formState.isSubmitting;
 
@@ -8,5 +8,3 @@ const UseLoginForm = () => {
 
   return { form, loading, onLogin };
 };
-
-export default UseLoginForm;

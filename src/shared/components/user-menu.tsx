@@ -1,4 +1,5 @@
 import { LogOutIcon } from "lucide-react";
+import { useAuth } from "../hooks/use-auth";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,13 +7,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../../../shared/components/shadcnui/dropdown-menu";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "../../../shared/components/shadcnui/avatar";
-import { useAuth } from "../../../shared/hooks/use-auth";
+} from "./shadcnui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "./shadcnui/avatar";
 
 const UserMenu = () => {
   const { logout, user } = useAuth();

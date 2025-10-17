@@ -1,26 +1,21 @@
 import { ScreenShareIcon } from "lucide-react";
-import Headline from "../../shared/components/headline";
-import Logo from "../../shared/components/logo";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardTitle,
-} from "../../shared/components/shadcnui/card";
-import AddTeams from "./components/add-teams";
-import UserMenu from "./components/user-menu";
-import { useDashboard } from "./hooks/use-dashboard";
+import { Card, CardContent } from "../../shared/components/shadcnui/card";
+import { useDashboard } from "./hooks/use-teams";
 import { buttonVariants } from "../../shared/components/shadcnui/button";
 import { Link } from "react-router";
+import Headline from "../../shared/components/headline";
+import Logo from "../../shared/components/logo";
+import AddTeams from "./components/add-teams";
+import UserMenu from "../../shared/components/user-menu";
 
-const DashboardPage = () => {
+const TeamsPage = () => {
   const { teams } = useDashboard();
 
   return (
     <div className="h-screen">
       <header className="mb-8 border-b py-4">
         <div className="mx-auto flex max-w-5xl items-center justify-between">
-          <Logo /> <UserMenu />
+          <Logo to="/times" /> <UserMenu />
         </div>
       </header>
 
@@ -37,7 +32,7 @@ const DashboardPage = () => {
               <CardContent className="flex items-center justify-between">
                 <span>{team.name}</span>
                 <Link
-                  to={`/painel/${team.id}`}
+                  to={`/times/${team.id}/menu`}
                   className={buttonVariants({
                     variant: "outline",
                     className: "cursor-pointer",
@@ -55,4 +50,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default TeamsPage;

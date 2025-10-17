@@ -12,7 +12,7 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "../../../shared/components/shadcnui/input-group";
-import UseLoginForm from "../hooks/use-login-form";
+import { UseLoginForm } from "../hooks/use-login-form";
 
 import { Button } from "../../../shared/components/shadcnui/button";
 

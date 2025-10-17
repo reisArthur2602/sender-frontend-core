@@ -5,7 +5,7 @@ const LoginPage = () => {
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="grid w-full max-w-sm gap-6">
-        <Logo />
+        <Logo to="/" />
 
         <h1>Conecte-se</h1>
 
