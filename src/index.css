@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -38,7 +38,7 @@
   --sidebar-accent-foreground: oklch(0.2435 0 0);
   --sidebar-border: oklch(0.9037 0 0);
   --sidebar-ring: oklch(0.8348 0.1302 160.908);
-  --font-sans: "Nunito", sans-serif;
+  --font-sans: "Rubik", sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: monospace;
   --radius: 0.5rem;
@@ -92,7 +92,7 @@
   --sidebar-accent-foreground: oklch(0.9851 0 0);
   --sidebar-border: oklch(0.2809 0 0);
   --sidebar-ring: oklch(0.898 0.1965 126.7145);
-  --font-sans: "Nunito", sans-serif;
+  --font-sans: "Rubik", sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: monospace;
   --radius: 0.5rem;
@@ -181,19 +181,17 @@
   }
 
   h1 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-medium;
   }
   h2 {
-    @apply text-xl font-semibold;
+    @apply text-xl font-medium;
   }
   h3 {
-    @apply text-lg;
+    @apply text-lg font-medium;
   }
-
   p {
     @apply text-muted-foreground text-sm;
   }
-
   button {
     @apply cursor-pointer;
   }

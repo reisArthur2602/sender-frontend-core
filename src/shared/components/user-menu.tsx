@@ -1,4 +1,4 @@
-import { LogOutIcon } from "lucide-react";
+import { LogOutIcon, Settings, User2Icon } from "lucide-react";
 import { useAuth } from "../hooks/use-auth";
 import {
   DropdownMenu,
@@ -32,6 +32,15 @@ const UserMenu = () => {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
 
+        <DropdownMenuItem onClick={logout}>
+          <Settings className="opacity-60" aria-hidden="true" />
+          Configurações
+        </DropdownMenuItem>
+
+        <DropdownMenuItem onClick={logout}>
+          <User2Icon className="opacity-60" aria-hidden="true" />
+          Meu Perfil
+        </DropdownMenuItem>
         <DropdownMenuItem onClick={logout}>
           <LogOutIcon className="opacity-60" aria-hidden="true" />
           Sair da conta

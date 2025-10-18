@@ -1,19 +1,19 @@
 import { NavLink, useParams } from "react-router";
-import { Bot, LayoutGridIcon, Smartphone, User2Icon } from "lucide-react";
+import { Bot, LayoutGridIcon, Smartphone, Users2 } from "lucide-react";
 import Logo from "../../../shared/components/logo";
 import UserMenu from "../../../shared/components/user-menu";
 import { buttonVariants } from "../../../shared/components/shadcnui/button";
 import { cn } from "../../../shared/lib/utils";
 
 const navigationLinks = [
-  { href: "/", label: "Painel", icon: <LayoutGridIcon /> },
-  { href: "menu", label: "Menus", icon: <Bot /> },
-  { href: "contatos", label: "Contatos", icon: <User2Icon /> },
-  { href: "integracao", label: "Integrações", icon: <Smartphone /> },
+  { href: "", label: "Painel", icon: <LayoutGridIcon /> },
+  { href: "menus", label: "Menus", icon: <Bot /> },
+  { href: "contatos", label: "Contatos", icon: <Users2 /> },
+  { href: "integracao", label: "Integração", icon: <Smartphone /> },
 ];
 
 const Navbar = () => {
-  const { team_id } = useParams();
+  const { teamId } = useParams();
 
   return (
     <header className="bg-white/[0.01]">
@@ -31,7 +31,7 @@ const Navbar = () => {
         {navigationLinks.map(({ href, label, icon }) => (
           <NavLink
             key={href}
-            to={`/times/${team_id}/${href}`}
+            to={`/times/${teamId}/${href}`}
             className={({ isActive }) =>
               cn(
                 buttonVariants({
